@@ -7,6 +7,8 @@ import pl.edu.prz.stud.swawro.server.KryoClient;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.ErrorCode;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.c2s.RegisterRequest;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2c.RegisterResponse;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.InfoSessionExpiredRequest;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.InfoSessionExpiredResponse;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.RegisterSessionRequest;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.RegisterSessionResponse;
 
@@ -87,11 +89,11 @@ public class Config {
         }
         else throw new Exception("Invalid info loaded");
         if (st.hasMoreTokens()) {
-            serverInfo.setKryoPort(st.nextToken());
+            serverInfo.setHttpPort(st.nextToken());
         }
         else throw new Exception("Invalid info loaded");
         if (st.hasMoreTokens()) {
-            serverInfo.setHttpPort(st.nextToken());
+            serverInfo.setKryoPort(st.nextToken());
         }
         else throw new Exception("Invalid info loaded");
         if (st.hasMoreTokens()) {
@@ -116,6 +118,30 @@ public class Config {
             SLAVES_INFO.add(parseServerInfo(current));
             LOGGER.info("Config: Added to slave list - " + current);
         }
+    }
+
+    private static void sendInfoAboutExpiredSession() {
+        Gson gson = new Gson();
+        InfoSessionExpiredRequest infoSessionExpiredRequest = new InfoSessionExpiredRequest();
+        ServerInfo serverInfo = new ServerInfo();
+        serverInfo.setIp("127.0.0.1");
+        serverInfo.setHttpPort(Config.HTTP_PORT);
+        serverInfo.setKryoPort(Config.KRYO_PORT);
+        serverInfo.setInternalPort(Config.INTERNAL_PORT);
+        infoSessionExpiredRequest.setServerInfo(serverInfo);
+        String request = gson.toJson(infoSessionExpiredRequest);
+
+        String response = KryoClient.getInstance().sendRequestToServerImproved(request , MASTER_INFO);
+        InfoSessionExpiredResponse infoSessionExpiredResponse = new InfoSessionExpiredResponse();
+        try {
+            infoSessionExpiredResponse = gson.fromJson(response, InfoSessionExpiredResponse.class);
+            if (infoSessionExpiredResponse.getStatusCode() != 0) throw new Exception("Failed to expire session"); //TODO: ?
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        LOGGER.info("Session expired!"); //TODO: impr
     }
 
     private static void startSessionWatcherThread() {

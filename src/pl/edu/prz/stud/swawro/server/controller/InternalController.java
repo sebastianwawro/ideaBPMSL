@@ -38,7 +38,7 @@ public class InternalController {
     }
 
     public String infoSessionExpired (String request) {
-
+        //TODO: when info received, connections--
         return null;
     }
 

@@ -157,6 +157,7 @@ public class PacketProcessor {
             ResponsePacket responsePacket = new ResponsePacket();
             responsePacket.setStatusCode(ErrorCode.NOT_LOGGED_IN.getErrorCode());
             response = gson.toJson(responsePacket);
+            return response;
         }
 
         if (packetRoute == null) {
@@ -196,6 +197,7 @@ public class PacketProcessor {
             ResponsePacket responsePacket = new ResponsePacket();
             responsePacket.setStatusCode(ErrorCode.NOT_LOGGED_IN.getErrorCode());
             response = gson.toJson(responsePacket);
+            return response;
         }
 
         if (packetId > 100 && packetId < 200) {
