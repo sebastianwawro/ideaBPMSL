@@ -56,6 +56,9 @@ public class Config {
             USE_OLD_PACKET_PROCESSOR = Boolean.valueOf(Settings.getProperty("UseOldPacketProcessor", "true"));
             LOGGER.info("Config: " + "UseOldPacketProcessor" + "=" + USE_OLD_PACKET_PROCESSOR);
 
+            SESSION_TIME = Long.valueOf(Settings.getProperty("SessionTimeSeconds", "1200"))*1000;
+            LOGGER.info("Config: " + "SessionTimeSeconds" + "=" + SESSION_TIME);
+
             KRYO_PORT = Settings.getProperty("KryoPort", "8888");
             LOGGER.info("Config: " + "KryoPort" + "=" + KRYO_PORT);
 
@@ -148,6 +151,7 @@ public class Config {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                LOGGER.info("SessionManager: Currently active sessions count: " + ALLOWED_SESSIONS.size());
                 for (SessionInfo info : ALLOWED_SESSIONS) {
                     if (info.getExpireTime() < System.currentTimeMillis()) {
                         ALLOWED_SESSIONS.remove(info); //TODO: send info about expired session!
