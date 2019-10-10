@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bpmdb2?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">toor</property>
+    <property name="hibernate.connection.CharSet">utf8</property>
+    <property name="hibernate.connection.characterEncoding">utf8</property>
+    <property name="hibernate.connection.useUnicode">true</property>
+    <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+    <property name="show_sql">true</property>
+
+    <!-- c3p0 config http://www.hibernate.org/214.html -->
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    <property name="hibernate.c3p0.acquire_increment">1</property>
+    <property name="hibernate.c3p0.idle_test_period">60</property>
+    <property name="hibernate.c3p0.min_size">1</property>
+    <property name="hibernate.c3p0.max_size">2</property>
+    <property name="hibernate.c3p0.max_statements">50</property>
+    <property name="hibernate.c3p0.timeout">0</property>
+    <property name="hibernate.c3p0.acquireRetryAttempts">1</property>
+    <property name="hibernate.c3p0.acquireRetryDelay">250</property>
+<!--
+    <mapping resource="User.hbm.xml"/>
+    <mapping resource="BpMeasure.hbm.xml"/>
+    <mapping resource="Abnormal.hbm.xml"/>
+    <mapping resource="Relation.hbm.xml"/>
+    <mapping resource="Settings.hbm.xml"/>
+    <mapping resource="HrMeasure.hbm.xml"/>
+    <mapping resource="OxyMeasure.hbm.xml"/>
+    <mapping resource="DiaryEntry.hbm.xml"/>
+    <mapping resource="SleepMeasure.hbm.xml"/>
+    <mapping resource="UserAuth.hbm.xml"/>
+    <mapping resource="DeliveredAbnormal.hbm.xml"/>
+    <mapping resource="UserDataHistory.hbm.xml"/>
+-->
+
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.User"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.BpMeasure"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.Abnormal"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.Relation"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.Settings"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.HrMeasure"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.OxyMeasure"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.DiaryEntry"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.SleepMeasure"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.UserAuth"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.DeliveredAbnormal"/>
+    <mapping class="pl.edu.prz.stud.swawro.server.Model.UserDataHistory"/>
+
+
+  </session-factory>
+</hibernate-configuration>

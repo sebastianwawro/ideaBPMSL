@@ -1,0 +1,16 @@
+ServerInfo master
+List<ServerInfo> slaves
+
+
+ServerInfo
+ip
+kryoPort
+httpPort
+telnetPort
+maxConnections
+importance
+
+RegisterSessionRequest
+RegisterSessionResponse
+
+Task<RemoveSession>
