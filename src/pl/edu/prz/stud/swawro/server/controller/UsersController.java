@@ -47,6 +47,7 @@ import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.c2s.UploadSetting
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2c.ChangePasswordResponse;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2c.LogOutOtherDevicesResponse;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2c.UploadSettingsResponse;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.ServerInfoTO;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.to.AbnormalTO;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.to.RelationTO;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.to.SettingsTO;
@@ -258,6 +259,7 @@ public class UsersController {
             return gson.toJson(logInResponse);
         }
         //TODO: ATTACH INFO TO logInResponse
+        logInResponse.setServerInfo(serverInfo);
         //TODO:EXTENDER
         
         logInResponse.setStatusCode(0);

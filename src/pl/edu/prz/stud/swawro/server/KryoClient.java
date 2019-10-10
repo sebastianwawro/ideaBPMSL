@@ -4,6 +4,9 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
+import com.google.gson.Gson;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.ErrorCode;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.ResponsePacket;
 import pl.edu.prz.stud.swawro.server.config.ServerInfo;
 
 import java.io.IOException;
@@ -55,7 +58,10 @@ public class KryoClient {
         }
         catch (Exception e) {
             e.printStackTrace();
-            exit(-1); //TODO: instead of exit generate error response
+            Gson gson = new Gson();
+            ResponsePacket responsePacket = new ResponsePacket();
+            responsePacket.setStatusCode(ErrorCode.INTERNAL_ERROR.getErrorCode());
+            responseStr = gson.toJson(responsePacket);
         }
         closeConnection();
         return responseStr;

@@ -133,6 +133,16 @@ public class Config {
         }).start();
     }
 
+    public static boolean doesSessionExist(String uuid) {
+        for (SessionInfo info : ALLOWED_SESSIONS) {
+            if (info.getExpireTime() < System.currentTimeMillis()) {
+                continue;
+            }
+            if (info.getUuid().equals(uuid)) return true;
+        }
+        return false;
+    }
+
     public static ServerInfo attachNewSessionToSlave(String uuid) {
         int slavesCount = SLAVES_INFO.size();
         do {

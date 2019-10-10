@@ -6,8 +6,10 @@
 package pl.edu.prz.stud.swawro.server.controller;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.ErrorCode;
 import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.ResponsePacket;
+import pl.edu.prz.stud.swawro.server.ServerAccessLayer.Packets.s2s.UuidCheck;
 import pl.edu.prz.stud.swawro.server.config.Config;
 
 import java.util.HashMap;
@@ -119,12 +121,37 @@ public class PacketProcessor {
         return response;
     }
 
+    private int checkSession(String packet) {
+        Gson gson = new Gson();
+        UuidCheck uuidCheck = null;
+
+        try {
+            uuidCheck = gson.fromJson(packet, UuidCheck.class);
+        }
+        catch (JsonSyntaxException e) {
+            return -1;
+        }
+
+        if (!Config.doesSessionExist(uuidCheck.getUuid())) {
+            return -2;
+        }
+
+        return 0;
+    }
+
     public synchronized String processPacket(String packet, int packetId){
         //TODO: if slave then check if session exists!
         String response = null;
         Gson gson = new Gson();
         PacketRoute packetRoute = null;
         if (packetId < 900) packetRoute = packetRouteMap.get(packetId);
+
+        if (Config.SERVER_MODE.equals("slave") && checkSession(packet) < 0) {
+            ResponsePacket responsePacket = new ResponsePacket();
+            responsePacket.setStatusCode(ErrorCode.NOT_LOGGED_IN.getErrorCode());
+            response = gson.toJson(responsePacket);
+        }
+
         if (packetRoute == null) {
             ResponsePacket responsePacket = new ResponsePacket();
             responsePacket.setStatusCode(ErrorCode.NONEXISTENT_PACKET.getErrorCode());
