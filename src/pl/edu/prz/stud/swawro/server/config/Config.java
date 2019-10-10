@@ -22,6 +22,7 @@ import static java.lang.System.in;
 public class Config {
     private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
     public static String SERVER_MODE;
+    public static Boolean USE_OLD_PACKET_PROCESSOR;
     public static String KRYO_PORT;
     public static String HTTP_PORT;
     public static String INTERNAL_PORT;
@@ -49,6 +50,9 @@ public class Config {
 
             SERVER_MODE = Settings.getProperty("ServerMode", "dual");
             LOGGER.info("Config: " + "ServerMode" + "=" + SERVER_MODE);
+
+            USE_OLD_PACKET_PROCESSOR = Boolean.valueOf(Settings.getProperty("UseOldPacketProcessor", "true"));
+            LOGGER.info("Config: " + "UseOldPacketProcessor" + "=" + USE_OLD_PACKET_PROCESSOR);
 
             KRYO_PORT = Settings.getProperty("KryoPort", "8888");
             LOGGER.info("Config: " + "KryoPort" + "=" + KRYO_PORT);

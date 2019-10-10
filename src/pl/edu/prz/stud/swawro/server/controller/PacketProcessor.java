@@ -139,6 +139,13 @@ public class PacketProcessor {
         return 0;
     }
 
+    public String processPacket(String packet, int packetId) {
+        if (Config.USE_OLD_PACKET_PROCESSOR)
+            return processPacketOld(packet, packetId);
+        else
+            return processPacketNew(packet, packetId);
+    }
+
     public synchronized String processPacketNew(String packet, int packetId){
         //TODO: if slave then check if session exists!
         String response = null;
@@ -181,7 +188,7 @@ public class PacketProcessor {
         return response;
     }
     
-    public synchronized String processPacket(String packet, int packetId){
+    public synchronized String processPacketOld(String packet, int packetId){
         String response = null;
         Gson gson = new Gson();
 

@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6a9616-d673-420b-bd61-2f1f5e00d5d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BPMSL.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bpmsl/BPMSL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bpmsl/BPMSL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/RelationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/RelationsController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+            <state relative-caret-position="218">
+              <caret line="53" column="106" selection-start-line="53" selection-start-column="106" selection-end-line="53" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
+            <state relative-caret-position="388">
+              <caret line="145" column="54" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -175,13 +170,13 @@
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/RegisterSessionResponse.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/InternalController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/UuidCheck.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2c/LogInResponse.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/UsersController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/KryoClient.java" />
         <option value="$PROJECT_DIR$/src/bpmsl/BPMSL.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/RelationsController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/DataController.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java" />
       </list>
     </option>
@@ -768,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+        <state relative-caret-position="218">
+          <caret line="53" column="106" selection-start-line="53" selection-start-column="106" selection-end-line="53" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -778,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
+        <state relative-caret-position="388">
+          <caret line="145" column="54" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
         </state>
       </provider>
     </entry>
