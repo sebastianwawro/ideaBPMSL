@@ -47,7 +47,7 @@ import pl.edu.prz.stud.swawro.server.database.dao.UserDataHistoryDAO;
 public class RelationsController {
     private static final RelationsController _instance = new RelationsController();
     
-    private RelationsController(){}
+    public RelationsController(){}
     
     public static final RelationsController getInstance() {
         return _instance;

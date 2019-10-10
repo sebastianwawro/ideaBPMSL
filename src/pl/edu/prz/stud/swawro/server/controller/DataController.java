@@ -79,7 +79,7 @@ import pl.edu.prz.stud.swawro.server.database.dao.UserDAO;
 public class DataController {
     private static final DataController _instance = new DataController();
     
-    private DataController(){}
+    public DataController(){}
     
     public static final DataController getInstance() {
         return _instance;

@@ -8,6 +8,7 @@ package bpmsl;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Logger;
 
+import pl.edu.prz.stud.swawro.server.KryoInternalServer;
 import pl.edu.prz.stud.swawro.server.KryoServer;
 import pl.edu.prz.stud.swawro.server.SimpleHttpServer;
 import pl.edu.prz.stud.swawro.server.controller.PacketProcessor;
@@ -24,6 +25,7 @@ import static java.lang.System.exit;
 public class BPMSL {
     private static final Logger LOGGER = Logger.getLogger(BPMSL.class.getName());
     private static Semaphore kryoSemi = new Semaphore(1);
+    private static Semaphore kryoIntSemi = new Semaphore(1);
     private static Semaphore servSemi = new Semaphore(1);
 
     public static void startWebServer() {
@@ -65,6 +67,7 @@ public class BPMSL {
         BPMSL.startWebServer();
         
         if (kryoSemi.tryAcquire()) KryoServer.getInstance().startKryoServer();
+        if (kryoIntSemi.tryAcquire()) KryoInternalServer.getInstance().startKryoServer();
         //bufferSize, myhibutil do drugiej przenies
     }
     

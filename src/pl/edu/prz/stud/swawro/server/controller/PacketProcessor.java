@@ -139,7 +139,7 @@ public class PacketProcessor {
         return 0;
     }
 
-    public synchronized String processPacket(String packet, int packetId){
+    public synchronized String processPacketNew(String packet, int packetId){
         //TODO: if slave then check if session exists!
         String response = null;
         Gson gson = new Gson();
@@ -181,9 +181,16 @@ public class PacketProcessor {
         return response;
     }
     
-    public synchronized String processPacketOld(String packet, int packetId){
+    public synchronized String processPacket(String packet, int packetId){
         String response = null;
         Gson gson = new Gson();
+
+        if (Config.SERVER_MODE.equals("slave") && checkSession(packet) < 0) {
+            ResponsePacket responsePacket = new ResponsePacket();
+            responsePacket.setStatusCode(ErrorCode.NOT_LOGGED_IN.getErrorCode());
+            response = gson.toJson(responsePacket);
+        }
+
         if (packetId > 100 && packetId < 200) {
             UsersController usersController = UsersController.getInstance();
             switch (packetId) {
