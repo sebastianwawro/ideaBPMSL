@@ -150,7 +150,8 @@ public class Config {
             public void run() {
                 for (SessionInfo info : ALLOWED_SESSIONS) {
                     if (info.getExpireTime() < System.currentTimeMillis()) {
-                        ALLOWED_SESSIONS.remove(info); //TODO: send info about expired session! atm useless
+                        ALLOWED_SESSIONS.remove(info); //TODO: send info about expired session!
+                        sendInfoAboutExpiredSession();
                     }
                 }
                 try {
