@@ -151,18 +151,19 @@ public class Config {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                LOGGER.info("SessionManager: Currently active sessions count: " + ALLOWED_SESSIONS.size());
-                for (SessionInfo info : ALLOWED_SESSIONS) {
-                    if (info.getExpireTime() < System.currentTimeMillis()) {
-                        ALLOWED_SESSIONS.remove(info); //TODO: send info about expired session!
-                        sendInfoAboutExpiredSession();
+                while (true) {
+                    LOGGER.info("SessionManager: Currently active sessions count: " + ALLOWED_SESSIONS.size());
+                    for (SessionInfo info : ALLOWED_SESSIONS) {
+                        if (info.getExpireTime() < System.currentTimeMillis()) {
+                            ALLOWED_SESSIONS.remove(info); //TODO: send info about expired session!
+                            sendInfoAboutExpiredSession();
+                        }
                     }
-                }
-                try {
-                    Thread.sleep(5000);
-                }
-                catch (Exception e) {
-                    e.printStackTrace(); //?!?
+                    try {
+                        Thread.sleep(5000);
+                    } catch (Exception e) {
+                        e.printStackTrace(); //?!?
+                    }
                 }
             }
         }).start();
