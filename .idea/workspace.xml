@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6a9616-d673-420b-bd61-2f1f5e00d5d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bpmsl/BPMSL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bpmsl/BPMSL.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,10 +45,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/bpmsl/BPMSL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="99" column="138" selection-start-line="99" selection-start-column="138" selection-end-line="99" selection-end-column="138" />
+            <state relative-caret-position="187">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -161,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2c/LogInResponse.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/UsersController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/KryoClient.java" />
-        <option value="$PROJECT_DIR$/src/bpmsl/BPMSL.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/RelationsController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/DataController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java" />
@@ -179,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/bpmsl/BPMSL.java" />
       </list>
     </option>
   </component>
@@ -521,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bpmsl/BPMSL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2c/AcceptAsDoctorResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -737,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -769,6 +746,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="99" column="138" selection-start-line="99" selection-start-column="138" selection-end-line="99" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bpmsl/BPMSL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>

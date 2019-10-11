@@ -21,6 +21,7 @@ import static java.lang.System.exit;
  *
  * @author Sebastian
  * TODO: hashmap redirection
+ * TODO: load sessions on start (only active & it needs to know to which server session belongs)
  */
 public class BPMSL {
     private static final Logger LOGGER = Logger.getLogger(BPMSL.class.getName());
