@@ -34,7 +34,7 @@ public class SleepMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (SleepMeasure sleepMeasure : sleepMeasures) {
-                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ? AND sm.deep = ? AND sm.shallow = ? AND sm.total = ? AND sm.wakeupTimes = ? AND sm.date = ?");
+                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ?0 AND sm.deep = ?1 AND sm.shallow = ?2 AND sm.total = ?3 AND sm.wakeupTimes = ?4 AND sm.date = ?5");
                 hqlQuery.setParameter(0, sleepMeasure.getUser().getId());
                 hqlQuery.setParameter(1, sleepMeasure.getDeep());
                 hqlQuery.setParameter(2, sleepMeasure.getShallow());
@@ -69,13 +69,13 @@ public class SleepMeasureDAO {
         try {
             tx = session.beginTransaction();
             if (defaultGet==1) {
-                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ? ORDER BY sm.date desc");
+                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ?0 ORDER BY sm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setMaxResults(10);
                 sleepMeasuresFound = hqlQuery.list();
             }
             else {
-                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ? AND sm.date BETWEEN ? AND ? ORDER BY sm.date desc");
+                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ?0 AND sm.date BETWEEN ?1 AND ?2 ORDER BY sm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setParameter(1, dateStart);
                 hqlQuery.setParameter(2, dateEnd);
@@ -100,7 +100,7 @@ public class SleepMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (SleepMeasure sleepMeasure : sleepMeasures) {
-                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ? AND sm.deep = ? AND sm.shallow = ? AND sm.total = ? AND sm.wakeupTimes = ? AND sm.date = ?");
+                Query hqlQuery = session.createQuery("FROM SleepMeasure as sm WHERE sm.user.id = ?0 AND sm.deep = ?1 AND sm.shallow = ?2 AND sm.total = ?3 AND sm.wakeupTimes = ?4 AND sm.date = ?5");
                 hqlQuery.setParameter(0, sleepMeasure.getUser().getId());
                 hqlQuery.setParameter(1, sleepMeasure.getDeep());
                 hqlQuery.setParameter(2, sleepMeasure.getShallow());

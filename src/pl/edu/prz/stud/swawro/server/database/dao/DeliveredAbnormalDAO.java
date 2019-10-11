@@ -72,7 +72,7 @@ public class DeliveredAbnormalDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM DeliveredAbnormal as da WHERE da.doctor.id = ?");
+            Query hqlQuery = session.createQuery("FROM DeliveredAbnormal as da WHERE da.doctor.id = ?0");
             deliveredAbnormals = hqlQuery.setParameter(0, doctorId).list();
             if (deliveredAbnormals == null || deliveredAbnormals.isEmpty())
                 deliveredAbnormals = null;

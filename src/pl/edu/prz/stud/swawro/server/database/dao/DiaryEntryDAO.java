@@ -34,7 +34,7 @@ public class DiaryEntryDAO {
         try {
             tx = session.beginTransaction();
             for (DiaryEntry diaryEntry : diaryEntries) {
-                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ? AND de.description = ? AND de.date = ?");
+                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ?0 AND de.description = ?1 AND de.date = ?2");
                 hqlQuery.setParameter(0, diaryEntry.getUser().getId());
                 hqlQuery.setParameter(1, diaryEntry.getDescription());
                 hqlQuery.setParameter(2, diaryEntry.getDate());
@@ -66,13 +66,13 @@ public class DiaryEntryDAO {
         try {
             tx = session.beginTransaction();
             if (defaultGet==1) {
-                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ? ORDER BY de.date desc");
+                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ?0 ORDER BY de.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setMaxResults(10);
                 diaryEntriesFound = hqlQuery.list();
             }
             else {
-                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ? AND de.date BETWEEN ? AND ? ORDER BY de.date desc");
+                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ?0 AND de.date BETWEEN ?1 AND ?2 ORDER BY de.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setParameter(1, dateStart);
                 hqlQuery.setParameter(2, dateEnd);
@@ -97,7 +97,7 @@ public class DiaryEntryDAO {
         try {
             tx = session.beginTransaction();
             for (DiaryEntry diaryEntry : diaryEntries) {
-                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ? AND de.description = ? AND de.date = ?");
+                Query hqlQuery = session.createQuery("FROM DiaryEntry as de WHERE de.user.id = ?0 AND de.description = ?1 AND de.date = ?2");
                 hqlQuery.setParameter(0, diaryEntry.getUser().getId());
                 hqlQuery.setParameter(1, diaryEntry.getDescription());
                 hqlQuery.setParameter(2, diaryEntry.getDate());

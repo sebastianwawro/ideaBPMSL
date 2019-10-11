@@ -31,7 +31,7 @@ public class SettingsDAO {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ? AND st.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ?0 AND st.user.id = ?1");
             hqlQuery.setParameter(0, settings.getDoctor().getId());
             hqlQuery.setParameter(1, settings.getUser().getId());
             List<Settings> settingsFound = hqlQuery.list();
@@ -74,7 +74,7 @@ public class SettingsDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ? AND st.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ?0 AND st.user.id = ?1");
             List<Settings> settings = hqlQuery.setParameter(0, doctorId).setParameter(1, userId).list();
             if (settings == null || settings.isEmpty())
                 settings = null;
@@ -99,7 +99,7 @@ public class SettingsDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ?");
+            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.doctor.id = ?0");
             settings = hqlQuery.setParameter(0, doctorId).list();
             if (settings == null || settings.isEmpty())
                 settings = null;
@@ -123,7 +123,7 @@ public class SettingsDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.user.id = ?0");
             settings = hqlQuery.setParameter(0, userId).list();
             if (settings == null || settings.isEmpty())
                 settings = null;
@@ -147,7 +147,7 @@ public class SettingsDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.user.id = ? OR st.doctor.id = ?");
+            Query hqlQuery = session.createQuery("FROM Settings as st WHERE st.user.id = ?0 OR st.doctor.id = ?1");
             settings = hqlQuery.setParameter(0, userId).setParameter(1, userId).list();
             if (settings == null || settings.isEmpty())
                 settings = null;

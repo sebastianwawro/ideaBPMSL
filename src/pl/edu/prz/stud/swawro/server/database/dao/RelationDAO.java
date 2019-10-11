@@ -31,7 +31,7 @@ public class RelationDAO {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.doctor.id = ? AND rel.user.id = ? AND rel.isActive = 1");
+            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.doctor.id = ?0 AND rel.user.id = ?1 AND rel.isActive = 1");
             hqlQuery.setParameter(0, relation.getDoctor().getId());
             hqlQuery.setParameter(1, relation.getUser().getId());
             List<Relation> relationsFound = hqlQuery.list();
@@ -74,7 +74,7 @@ public class RelationDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND rel.doctor.id = ? AND rel.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND rel.doctor.id = ?0 AND rel.user.id = ?1");
             List<Relation> relations = hqlQuery.setParameter(0, doctorId).setParameter(1, userId).list();
             if (relations == null || relations.isEmpty()) {
                 relations = null;
@@ -100,7 +100,7 @@ public class RelationDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND (rel.doctor.id = ? OR rel.user.id = ?)");
+            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND (rel.doctor.id = ?0 OR rel.user.id = ?1)");
             relations = hqlQuery.setParameter(0, userId).setParameter(1, userId).list();
             if (relations == null || relations.isEmpty()) {
                 relations = null;
@@ -125,7 +125,7 @@ public class RelationDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND rel.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM Relation as rel WHERE rel.isActive = 1 AND rel.user.id = ?0");
             relations = hqlQuery.setParameter(0, userId).list();
             if (relations == null || relations.isEmpty()) {
                 relations = null;

@@ -52,7 +52,7 @@ public class UserAuthDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.uuid = ?");
+            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.uuid = ?0");
             List<UserAuth> userAuths = hqlQuery.setParameter(0, uuid).list();
             if (userAuths == null || userAuths.isEmpty()) {
                 userAuth = null;
@@ -79,7 +79,7 @@ public class UserAuthDAO {
         
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.uuid = ?");
+            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.uuid = ?0");
             List<UserAuth> userAuths = hqlQuery.setParameter(0, uuid).list();
             for (UserAuth userAuth : userAuths) {
                 session.delete(userAuth);
@@ -102,7 +102,7 @@ public class UserAuthDAO {
         
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.user.id = ? AND ua.uuid != ?");
+            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.user.id = ?0 AND ua.uuid != ?1");
             List<UserAuth> userAuths = hqlQuery.setParameter(0, userId).setParameter(1, uuid).list();
             for (UserAuth userAuth : userAuths) {
                 session.delete(userAuth);
@@ -125,7 +125,7 @@ public class UserAuthDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM UserAuth as ua WHERE ua.user.id = ?0");
             List<UserAuth> userAuths = hqlQuery.setParameter(0, userId).list();
             for (UserAuth userAuth : userAuths) {
                 session.delete(userAuth);

@@ -34,7 +34,7 @@ public class OxyMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (OxyMeasure oxyMeasure : oxyMeasures) {
-                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ? AND om.oxy = ? AND om.date = ?");
+                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ?0 AND om.oxy = ?1 AND om.date = ?2");
                 hqlQuery.setParameter(0, oxyMeasure.getUser().getId());
                 hqlQuery.setParameter(1, oxyMeasure.getOxy());
                 hqlQuery.setParameter(2, oxyMeasure.getDate());
@@ -66,13 +66,13 @@ public class OxyMeasureDAO {
         try {
             tx = session.beginTransaction();
             if (defaultGet==1) {
-                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ? ORDER BY om.date desc");
+                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ?0 ORDER BY om.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setMaxResults(10);
                 oxyMeasuresFound = hqlQuery.list();
             }
             else {
-                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ? AND om.date BETWEEN ? AND ? ORDER BY om.date desc");
+                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ?0 AND om.date BETWEEN ?1 AND ?2 ORDER BY om.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setParameter(1, dateStart);
                 hqlQuery.setParameter(2, dateEnd);
@@ -97,7 +97,7 @@ public class OxyMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (OxyMeasure oxyMeasure : oxyMeasures) {
-                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ? AND om.oxy = ? AND om.date = ?");
+                Query hqlQuery = session.createQuery("FROM OxyMeasure as om WHERE om.user.id = ?0 AND om.oxy = ?1 AND om.date = ?2");
                 hqlQuery.setParameter(0, oxyMeasure.getUser().getId());
                 hqlQuery.setParameter(1, oxyMeasure.getOxy());
                 hqlQuery.setParameter(2, oxyMeasure.getDate());

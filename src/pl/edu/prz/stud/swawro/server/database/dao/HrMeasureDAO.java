@@ -34,7 +34,7 @@ public class HrMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (HrMeasure hrMeasure : hrMeasures) {
-                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ? AND hrm.hr = ? AND hrm.date = ?");
+                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ?0 AND hrm.hr = ?1 AND hrm.date = ?2");
                 hqlQuery.setParameter(0, hrMeasure.getUser().getId());
                 hqlQuery.setParameter(1, hrMeasure.getHr());
                 hqlQuery.setParameter(2, hrMeasure.getDate());
@@ -66,13 +66,13 @@ public class HrMeasureDAO {
         try {
             tx = session.beginTransaction();
             if (defaultGet==1) {
-                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ? ORDER BY hrm.date desc");
+                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ?0 ORDER BY hrm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setMaxResults(10);
                 hrMeasuresFound = hqlQuery.list();
             }
             else {
-                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ? AND hrm.date BETWEEN ? AND ? ORDER BY hrm.date desc");
+                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ?0 AND hrm.date BETWEEN ?1 AND ?2 ORDER BY hrm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setParameter(1, dateStart);
                 hqlQuery.setParameter(2, dateEnd);
@@ -97,7 +97,7 @@ public class HrMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (HrMeasure hrMeasure : hrMeasures) {
-                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ? AND hrm.hr = ? AND hrm.date = ?");
+                Query hqlQuery = session.createQuery("FROM HrMeasure as hrm WHERE hrm.user.id = ?0 AND hrm.hr = ?1 AND hrm.date = ?2");
                 hqlQuery.setParameter(0, hrMeasure.getUser().getId());
                 hqlQuery.setParameter(1, hrMeasure.getHr());
                 hqlQuery.setParameter(2, hrMeasure.getDate());

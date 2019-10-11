@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe6a9616-d673-420b-bd61-2f1f5e00d5d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+            <state relative-caret-position="403">
+              <caret line="149" column="53" lean-forward="true" selection-start-line="149" selection-start-column="53" selection-end-line="149" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6517#7311#0" expanded="true" />
@@ -37,19 +45,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/c2s/UploadBpMeasureRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="337">
+              <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
-              <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+            <state relative-caret-position="61">
+              <caret line="99" column="138" selection-start-line="99" selection-start-column="138" selection-end-line="99" selection-end-column="138" />
             </state>
           </provider>
         </entry>
@@ -72,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/InternalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
+            <state relative-caret-position="248">
               <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,23 +90,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/InfoSessionExpiredRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-              <folding>
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/KryoClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+            <state relative-caret-position="61">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,19 +128,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DiaryEntry.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/HrMeasure.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/UserDataHistory.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/UserAuth.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/SleepMeasure.hbm.xml" />
         <option value="$PROJECT_DIR$/src/Settings.hbm.xml" />
         <option value="$PROJECT_DIR$/src/Relation.hbm.xml" />
         <option value="$PROJECT_DIR$/src/OxyMeasure.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/MyHibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketRoute.java" />
@@ -184,6 +169,16 @@
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/InfoSessionExpiredResponse.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/InternalController.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java" />
       </list>
     </option>
   </component>
@@ -249,6 +244,14 @@
               <item name="ideaBPMSL" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ideaBPMSL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ideaBPMSL" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="ServerAccessLayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,24 +261,6 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="ServerAccessLayer" type="462c0819:PsiDirectoryNode" />
               <item name="Packets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ideaBPMSL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ideaBPMSL" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerAccessLayer" type="462c0819:PsiDirectoryNode" />
-              <item name="Packets" type="462c0819:PsiDirectoryNode" />
-              <item name="c2s" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ideaBPMSL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ideaBPMSL" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerAccessLayer" type="462c0819:PsiDirectoryNode" />
-              <item name="Packets" type="462c0819:PsiDirectoryNode" />
-              <item name="s2s" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -368,7 +353,7 @@
     <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29104477" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29104477" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -383,7 +368,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49840087" weight="0.32852387" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.32963374" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5090618" side_tool="true" visible="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5090618" side_tool="true" visible="true" weight="0.32852387" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49093816" weight="0.32852387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -397,106 +382,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="123" column="71" selection-start-line="123" selection-start-column="71" selection-end-line="123" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/MyHibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/Abnormal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/BpMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/DeliveredAbnormal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/HrMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/DiaryEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/Relation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/OxyMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/UserDataHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/SleepMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/UserAuth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -581,16 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="186" column="67" selection-start-line="186" selection-start-column="67" selection-end-line="186" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,18 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6517#7311#0" expanded="true" />
-            <element signature="e#7310#7311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/c2s/UploadBpMeasureRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -739,10 +602,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/InfoSessionExpiredRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/KryoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="149" column="53" lean-forward="true" selection-start-line="149" selection-start-column="53" selection-end-line="149" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6517#7311#0" expanded="true" />
+            <element signature="e#7310#7311#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -761,7 +650,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/InternalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
+        <state relative-caret-position="248">
           <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -769,24 +658,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/ServerAccessLayer/Packets/s2s/InfoSessionExpiredRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/MyHibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        <state relative-caret-position="383">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/KryoClient.java">
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/Model/DeliveredAbnormal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        <state relative-caret-position="282">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/AbnormalDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="133" column="19" lean-forward="true" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/BpMeasureDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="168" column="155" selection-start-line="168" selection-start-column="155" selection-end-line="168" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DeliveredAbnormalDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/RelationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="127" column="114" selection-start-line="127" selection-start-column="114" selection-end-line="127" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SettingsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="149" column="112" selection-start-line="149" selection-start-column="112" selection-end-line="149" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserAuthDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3053">
+          <caret line="186" column="67" selection-start-line="186" selection-start-column="67" selection-end-line="186" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/UserDataHistoryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/controller/PacketProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/SleepMeasureDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="102" column="195" selection-start-line="102" selection-start-column="195" selection-end-line="102" selection-end-column="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/OxyMeasureDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="99" column="130" selection-start-line="99" selection-start-column="130" selection-end-line="99" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/HrMeasureDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="99" column="132" selection-start-line="99" selection-start-column="132" selection-end-line="99" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/prz/stud/swawro/server/database/dao/DiaryEntryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="99" column="138" selection-start-line="99" selection-start-column="138" selection-end-line="99" selection-end-column="138" />
         </state>
       </provider>
     </entry>

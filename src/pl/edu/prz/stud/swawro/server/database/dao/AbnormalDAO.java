@@ -72,7 +72,7 @@ public class AbnormalDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.user.id = ? AND ab.doctor.id = ?");
+            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.user.id = ?0 AND ab.doctor.id = ?1");
             abnormals = hqlQuery.setParameter(0, userId).setParameter(1, doctorId).list();
             if (abnormals == null || abnormals.isEmpty())
                 abnormals = null;
@@ -96,7 +96,7 @@ public class AbnormalDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.user.id = ? AND ab.doctor.id = ? AND ab.id NOT IN (SELECT da.abnormal.id FROM DeliveredAbnormal as da WHERE da.doctor.id = ?)"); //where ab.id not in select da.ab.id where doctor.id=?
+            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.user.id = ?0 AND ab.doctor.id = ?1 AND ab.id NOT IN (SELECT da.abnormal.id FROM DeliveredAbnormal as da WHERE da.doctor.id = ?2)"); //where ab.id not in select da.ab.id where doctor.id=?
             abnormals = hqlQuery.setParameter(0, userId).setParameter(1, doctorId).setParameter(2, doctorId).list();
             if (abnormals == null || abnormals.isEmpty())
                 abnormals = null;
@@ -120,7 +120,7 @@ public class AbnormalDAO {
 
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.doctor.id = ? AND ab.id NOT IN (SELECT da.abnormal.id FROM DeliveredAbnormal as da WHERE da.doctor.id = ?)"); //where ab.id not in select da.ab.id where doctor.id=?
+            Query hqlQuery = session.createQuery("FROM Abnormal as ab WHERE ab.doctor.id = ?0 AND ab.id NOT IN (SELECT da.abnormal.id FROM DeliveredAbnormal as da WHERE da.doctor.id = ?1)"); //where ab.id not in select da.ab.id where doctor.id=?
             abnormals = hqlQuery.setParameter(0, doctorId).setParameter(1, doctorId).list();
             if (abnormals == null || abnormals.isEmpty())
                 abnormals = null;

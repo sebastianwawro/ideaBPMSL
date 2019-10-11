@@ -32,7 +32,7 @@ public class BpMeasureDAO {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ? AND bpm.bpHigh = ? AND bpm.bpLow = ? AND bpm.date = ?");
+            Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0 AND bpm.bpHigh = ?1 AND bpm.bpLow = ?2 AND bpm.date = ?3");
             hqlQuery.setParameter(0, bpMeasure.getUser().getId());
             hqlQuery.setParameter(1, bpMeasure.getBpHigh());
             hqlQuery.setParameter(2, bpMeasure.getBpLow());
@@ -59,7 +59,7 @@ public class BpMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (BpMeasure bpMeasure : bpMeasures) {
-                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ? AND bpm.bpHigh = ? AND bpm.bpLow = ? AND bpm.date = ?");
+                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0 AND bpm.bpHigh = ?1 AND bpm.bpLow = ?2 AND bpm.date = ?3");
                 hqlQuery.setParameter(0, bpMeasure.getUser().getId());
                 hqlQuery.setParameter(1, bpMeasure.getBpHigh());
                 hqlQuery.setParameter(2, bpMeasure.getBpLow());
@@ -92,13 +92,13 @@ public class BpMeasureDAO {
         try {
             tx = session.beginTransaction();
             if (defaultGet==1) {
-                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ? ORDER BY bpm.date desc");
+                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0 ORDER BY bpm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setMaxResults(10);
                 bpMeasuresFound = hqlQuery.list();
             }
             else {
-                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ? AND bpm.date BETWEEN ? AND ? ORDER BY bpm.date desc");
+                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0 AND bpm.date BETWEEN ?1 AND ?2 ORDER BY bpm.date desc");
                 hqlQuery.setParameter(0, userId);
                 hqlQuery.setParameter(1, dateStart);
                 hqlQuery.setParameter(2, dateEnd);
@@ -142,7 +142,7 @@ public class BpMeasureDAO {
         List<BpMeasure> bpMeasures;
         try {
             tx = session.beginTransaction();
-            Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?");
+            Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0");
             bpMeasures = hqlQuery.setParameter(0, userId).list();
             for (int i = 0; i < bpMeasures.size(); i++) {
                 BpMeasure bpMeasure = bpMeasures.get(i);
@@ -166,7 +166,7 @@ public class BpMeasureDAO {
         try {
             tx = session.beginTransaction();
             for (BpMeasure bpMeasure : bpMeasures) {
-                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ? AND bpm.bpHigh = ? AND bpm.bpLow = ? AND bpm.date = ?");
+                Query hqlQuery = session.createQuery("FROM BpMeasure as bpm WHERE bpm.user.id = ?0 AND bpm.bpHigh = ?1 AND bpm.bpLow = ?2 AND bpm.date = ?3");
                 hqlQuery.setParameter(0, bpMeasure.getUser().getId());
                 hqlQuery.setParameter(1, bpMeasure.getBpHigh());
                 hqlQuery.setParameter(2, bpMeasure.getBpLow());
